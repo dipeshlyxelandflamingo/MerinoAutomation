@@ -1,65 +1,16 @@
 package domestic;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.time.Duration;
-
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import Base.BaseClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
 import generic.MerinoUtility;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LVT_ECatalogue_Enquiry {
+public class LVT_ECatalogue_Enquiry extends BaseClass {
 
-	WebDriver driver;
-	FileInputStream file;
-	FileOutputStream fileOut;
-	XSSFWorkbook workbook;
-	XSSFSheet sheet;
-	DataFormatter formate;
-
-	@BeforeTest
-	public void OpenBrowser() throws Exception {
-
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-		driver.get("https://staging.merinolaminates.com/en/");
-		driver.manage().window().maximize();
-		System.out.println(driver.getTitle());
-
-		MerinoUtility.usernamefield(driver, "stagingMerinoUser");
-		MerinoUtility.passwordfield(driver, "s!@5I#6@M34!70");
-		MerinoUtility.submitbutton(driver);
-
-		file = new FileInputStream("C:\\Users\\LYXELANDFLAMINGO\\Desktop\\Merino\\Domestic.xlsx");
-		workbook = new XSSFWorkbook(file);
-		sheet = workbook.getSheet("Domestic");
-		formate = new DataFormatter();
-
-	}
-
-	@Test (description = "Open LVT FLooring Page and Scroll Down to Form and fill the form with all Valid Input")
+	@Test(description = "Open LVT FLooring Page and Scroll Down to Form and fill the form with all Valid Input")
 	void TC_01() throws Exception {
 		try {
 			driver.navigate().to("https://staging.merinolaminates.com/en/product-category/lvt-flooring/loom/");
@@ -120,19 +71,6 @@ public class LVT_ECatalogue_Enquiry {
 			sheet.getRow(23).createCell(4).setCellValue("Form Not Submitting Succsessfully! ");
 
 		}
-	}
-
-	@AfterClass
-	void TearDown() throws Exception {
-		try {
-			fileOut = new FileOutputStream("C:\\Users\\LYXELANDFLAMINGO\\Desktop\\Merino\\Domestic.xlsx");
-			workbook.write(fileOut);
-		} finally {
-			workbook.close();
-			file.close();
-		}
-		driver.quit();
-
 	}
 
 }
