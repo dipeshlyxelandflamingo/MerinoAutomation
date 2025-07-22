@@ -65,10 +65,10 @@ public class Download_BIM_File_Form extends BaseClass {
 						.findElement(By.xpath("//div[text()='Your download has been started.']"));
 				System.out.println(DownloadStartMsg.getText());
 			}
-			sheet.getRow(4).createCell(4).setCellValue("Form Filled with All Valid Input!");
-			sheet.getRow(4).createCell(4).setCellValue("Form Submitting Succsessfully!");
+			sheet.getRow(1).createCell(3).setCellValue("Form Filled with All Valid Input!");
+			sheet.getRow(1).createCell(4).setCellValue("Form Submitting Succsessfully!");
 		} catch (Exception e) {
-			sheet.getRow(4).createCell(4).setCellValue("Form Not Submitting Succsessfully! ");
+			sheet.getRow(1).createCell(4).setCellValue("Form Not Submitting Succsessfully! ");
 
 		}
 	}

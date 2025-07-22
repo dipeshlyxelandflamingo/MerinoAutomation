@@ -50,7 +50,10 @@ public class MerinoUtility {
 	public static WebElement waitForElementToBeClickable(WebDriver driver, By loc) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		return wait.until(ExpectedConditions.elementToBeClickable(loc));
+		
 	}
+
+
 
 	public static void selectbyvalue(WebElement Emt, String value) {
 

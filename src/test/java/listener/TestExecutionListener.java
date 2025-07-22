@@ -57,14 +57,10 @@ public class TestExecutionListener implements ITestListener, ISuiteListener {
         System.out.println("==============================================");
 
         try {
-            String reportPath = System.getProperty("user.dir") + "/test-output/Default suite/Default test.html";
-            String excelPath = "C:\\Users\\LYXELANDFLAMINGO\\Desktop\\Merino\\Domestic.xlsx";
+            //String reportPath = System.getProperty("user.dir") + "/test-output/Default suite/Default test.html";
+            String excelPath = "C:/Users/LYXELANDFLAMINGO/Desktop/Merino/Domestic.xlsx";
 
-            File reportFile = new File(reportPath);
-            if (!reportFile.exists()) {
-                System.err.println("Report file not found at: " + reportPath);
-                return;
-            }
+            
 
             File excelFile = new File(excelPath);
             if (!excelFile.exists()) {
@@ -76,13 +72,13 @@ public class TestExecutionListener implements ITestListener, ISuiteListener {
             String subject = "Test Report for Suite: " + suite.getName();
             String body = "Hello Team, \n\nThe test suite has finished execution. Please find the attached report and Excel file.\n\nThanks,\nAutomation Team";
            // String to = "dipesh.singh@lyxelandflamingo.com";
-            String[] to = {"ravi.pal@lyxelandflamingo.com", "ruchi.singh@lyxelandflamingo.com"};
+            String[] to = {"ravi.pal@lyxelandflamingo.com", "dipesh.singh@lyxelandflamingo.com"};
 
             // Send email with attachments
-            EmailUtiility.sendEmail(to, subject, body, reportPath, excelPath);
-            System.out.println("Email sent successfully.");
+            EmailUtiility.sendEmail(to, subject, body, excelPath);
+            System.out.println("Email sent successfully.");	
         } catch (Exception e) {
-            System.err.println("Failed to send email: " + e.getClass().getName() + " - " + e.getMessage());
+            System.err.println("Failed to send email: " +  " - " + e.getMessage());
         }
     }
 }

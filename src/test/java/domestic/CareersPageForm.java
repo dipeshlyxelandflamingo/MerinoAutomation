@@ -1,6 +1,5 @@
 package domestic;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,24 +7,21 @@ import org.testng.annotations.Test;
 import Base.BaseClass;
 import generic.MerinoUtility;
 
-
-public class CareersPageForm extends BaseClass{
-	
+public class CareersPageForm extends BaseClass {
 
 	@Test(description = "Open Curation Page and Scroll Down to Form and fill the form with all Valid Input")
 	void TC_01() throws Exception {
 		try {
-		
-		Thread.sleep(2000);
-		driver.navigate().to(
-				"https://staging.merinolaminates.com/en/job-apply/?jid=Area%20Sales%20Manager%20%E2%80%93%20Project%20&%20OEM%20Sales&jit=37033");
 
-		driver.findElement(By.id("cookie_action_close_header")).click();
+			Thread.sleep(2000);
+			driver.navigate().to(
+					"https://merinolaminates.com/en/job-apply/?jid=Area%20Sales%20Manager%20%E2%80%93%20Project%20&%20OEM%20Sales&jit=37033");
 
-		Actions actions = new Actions(driver);
-		actions.scrollByAmount(0, 200).perform();
+			driver.findElement(By.id("cookie_action_close_header")).click();
 
-	
+			Actions actions = new Actions(driver);
+			actions.scrollByAmount(0, 200).perform();
+
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("(//input[@name='Name'])[1]")).sendKeys("Dipesh");
 			driver.findElement(By.xpath("(//input[@name='email'])[1]")).sendKeys("dipesh.singh@lyxelandflamingo.com");
@@ -70,23 +66,18 @@ public class CareersPageForm extends BaseClass{
 			// Actions actions = new Actions(driver);
 			actions.scrollByAmount(0, 400).perform();
 
-			driver.findElement(By.xpath("//input[@name='Resume']")).sendKeys("C:\\Users\\LYXELANDFLAMINGO\\upload.docx");
-
-			//String filePath = "C:\\Users\\LYXELANDFLAMINGO\\upload.docx";
-
-			// Use sendKeys() to send the file path
-			//uploadElement.sendKeys(filePath);
+			driver.findElement(By.xpath("//input[@name='Resume']"))
+					.sendKeys("C:\\Users\\LYXELANDFLAMINGO\\upload.docx");
 
 			driver.findElement(By.name("age_confirm")).click();
 
 			driver.findElement(By.xpath("(//input[@type='submit'])[3]")).click();
-			
-			sheet.getRow(2).createCell(4).setCellValue("Form Filled with All Valid Input!");
+
+			sheet.getRow(2).createCell(3).setCellValue("Form Filled with All Valid Input!");
 			sheet.getRow(2).createCell(4).setCellValue("Form Submitting Succsessfully!");
-		}catch(Exception e) 
-		{
+		} catch (Exception e) {
 			sheet.getRow(2).createCell(4).setCellValue("Form Not Submitting Succsessfully! ");
-			
+
 		}
 
 	}

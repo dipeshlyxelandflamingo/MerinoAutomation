@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Merino Test Suite">
+
+	<!-- Listener for email trigger -->
+	<listeners>
+		<listener class-name="listener.TestExecutionListener" />
+	</listeners>
+
+
 	<!-- First Test Class -->
 	<test name="Curations">
 		<classes>
@@ -8,18 +15,6 @@
 		</classes>
 	</test>
 
-	<!-- Second Test Class -->
-	<test name="Download_BIM_File_Form">
-		<classes>
-			<class name="domestic.Download_BIM_File_Form" />
-		</classes>
-	</test>
 
-<!-- Third Test Class -->
-	<test name="LVT_ECatalogue_Enquiry">
-		<classes>
-			<class name="domestic.LVT_ECatalogue_Enquiry" />
-		</classes>
-	</test>
 
 </suite>

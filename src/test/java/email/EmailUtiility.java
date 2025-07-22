@@ -9,7 +9,7 @@ public class EmailUtiility {
 	
 	
 	
-	 public static void sendEmail(String[] to, String subject, String body, String reportPath, String excelPath) {
+	 public static void sendEmail(String[] to, String subject, String body, String excelPath) {
 	        final String from = "dipesh.singh@lyxelandflamingo.com"; // Sender email
 	        final String username = "887f81001@smtp-brevo.com";      // SMTP user
 	        final String password = "dpHxUJOMsEv8rw4T";              // SMTP password
@@ -55,13 +55,7 @@ public class EmailUtiility {
 	            multipart.addBodyPart(textPart);
 
 	            // Attach the TestNG report if path is valid
-	            if (reportPath != null && !reportPath.isEmpty() && new File(reportPath).exists()) {
-	                MimeBodyPart reportAttachment = new MimeBodyPart();
-	                reportAttachment.attachFile(new File(reportPath));
-	                multipart.addBodyPart(reportAttachment);
-	            } else {
-	                System.err.println("Report file not found or invalid: " + reportPath);
-	            }
+	          
 
 	            // Attach the Excel file if path is valid
 	            if (excelPath != null && !excelPath.isEmpty() && new File(excelPath).exists()) {

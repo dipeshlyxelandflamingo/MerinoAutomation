@@ -4,15 +4,14 @@
   <listeners>
     <listener class-name="listener.TestExecutionListener"/>
   </listeners>
-  <test thread-count="5" name="Download BIM File Form Test(failed)">
+  <test thread-count="5" name="Design_Explorer_Email_Enquiry Form Test(failed)">
     <classes>
-      <class name="domestic.Download_BIM_File_Form">
+      <class name="domestic.Design_Explorer_Email_Enquiry">
         <methods>
-          <include name="TearDown"/>
           <include name="OpenBrowser"/>
-          <include name="testBimFormSubmission"/>
+          <include name="TC_01"/>
         </methods>
-      </class> <!-- domestic.Download_BIM_File_Form -->
+      </class> <!-- domestic.Design_Explorer_Email_Enquiry -->
     </classes>
-  </test> <!-- Download BIM File Form Test(failed) -->
+  </test> <!-- Design_Explorer_Email_Enquiry Form Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
