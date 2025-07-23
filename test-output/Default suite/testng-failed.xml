@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="domestic.Curations">
+      <class name="domestic.Check">
         <methods>
-          <include name="TC_01"/>
           <include name="OpenBrowser"/>
+          <include name="TC_01"/>
           <include name="TearDown"/>
         </methods>
-      </class> <!-- domestic.Curations -->
+      </class> <!-- domestic.Check -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

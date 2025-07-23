@@ -1,5 +1,7 @@
 package domestic;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -27,9 +29,9 @@ public class Curations extends BaseClass {
 	            Thread.sleep(2000);
 
 	            // Fill form
-	            driver.findElement(By.xpath("(//input[@name='Name'])[1]")).sendKeys("Dipesh");
-	            driver.findElement(By.xpath("(//input[@name='email'])[1]")).sendKeys("dipesh.singh@lyxelandflamingo.com");
-	            driver.findElement(By.xpath("(//input[@name='mobile'])[1]")).sendKeys("6354899390");
+	            driver.findElement(By.xpath("(//input[@name='Name'])[1]")).sendKeys("Mayank");
+	            driver.findElement(By.xpath("(//input[@name='email'])[1]")).sendKeys("mayank.jain@lyxelandflamingo.com");
+	            driver.findElement(By.xpath("(//input[@name='mobile'])[1]")).sendKeys("8377939308");
 
 	            WebElement CountryDropdown = driver.findElement(By.xpath("(//Select[@name='Country'])[1]"));
 	            new Select(CountryDropdown).selectByValue("India");
@@ -59,7 +61,7 @@ public class Curations extends BaseClass {
 	                sheet.getRow(4).createCell(4).setCellValue("Form Not Submitting Successfully! Error: " + errorMsg.getText());
 
 	                // Mark test as FAILED
-	                Assert.fail("Form submission failed with error: " + errorMsg.getText());
+	                AssertJUnit.fail("Form submission failed with error: " + errorMsg.getText());
 	                return;
 
 	            } catch (Exception noError) {
@@ -92,14 +94,14 @@ public class Curations extends BaseClass {
 	                } catch (Exception e2) {
 	                    System.out.println("❌ Unknown response after submit.");
 	                    sheet.getRow(4).createCell(4).setCellValue("Form Not Submitting Successfully! Unknown Response.");
-	                    Assert.fail("Unknown response after submission.");
+	                    AssertJUnit.fail("Unknown response after submission.");
 	                }
 	            }
 
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	            sheet.getRow(4).createCell(4).setCellValue("Form Not Submitting Successfully! Exception Occurred.");
-	            Assert.fail("Test failed due to exception: " + e.getMessage());
+	            AssertJUnit.fail("Test failed due to exception: " + e.getMessage());
 	        }
 	    }
 	}

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Merino Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Curations(failed)">
     <classes>
-      <class name="domestic.Curations">
+      <class name="domestic.Check">
         <methods>
-          <include name="TC_01"/>
           <include name="OpenBrowser"/>
+          <include name="TC_01"/>
           <include name="TearDown"/>
         </methods>
-      </class> <!-- domestic.Curations -->
+      </class> <!-- domestic.Check -->
     </classes>
   </test> <!-- Curations(failed) -->
 </suite> <!-- Failed suite [Merino Test Suite] -->
