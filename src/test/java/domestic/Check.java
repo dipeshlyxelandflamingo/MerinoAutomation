@@ -1,9 +1,6 @@
 package domestic;
 
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;
-import org.testng.annotations.Test;
-
 import Base.BaseClass;
 
 public class Check extends BaseClass{
