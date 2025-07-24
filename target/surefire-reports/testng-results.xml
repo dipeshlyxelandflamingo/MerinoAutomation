@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-23T17:51:49 IST" name="NewMerino" finished-at="2025-07-23T17:52:10 IST" duration-ms="20834">
+  <suite started-at="2025-07-24T12:21:47 IST" name="Suite" finished-at="2025-07-24T12:22:07 IST" duration-ms="20004">
     <groups>
     </groups>
-    <test started-at="2025-07-23T17:51:49 IST" name="Test" finished-at="2025-07-23T17:52:10 IST" duration-ms="20834">
+    <test started-at="2025-07-24T12:21:47 IST" name="Test" finished-at="2025-07-24T12:22:07 IST" duration-ms="20004">
       <class name="domestic.Check">
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-23T17:51:49 IST" name="OpenBrowser" finished-at="2025-07-23T17:52:02 IST" duration-ms="12924" status="PASS">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-24T12:21:47 IST" name="OpenBrowser" finished-at="2025-07-24T12:22:00 IST" duration-ms="13128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method signature="TC_01()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-23T17:52:02 IST" name="TC_01" description="Verify test" finished-at="2025-07-23T17:52:09 IST" duration-ms="6574" status="PASS">
+        <test-method signature="TC_01()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-24T12:22:00 IST" name="TC_01" description="Verify test" finished-at="2025-07-24T12:22:06 IST" duration-ms="5891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01 -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-23T17:52:09 IST" name="TearDown" finished-at="2025-07-23T17:52:10 IST" duration-ms="1247" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-24T12:22:06 IST" name="TearDown" finished-at="2025-07-24T12:22:07 IST" duration-ms="928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- domestic.Check -->
     </test> <!-- Test -->
-  </suite> <!-- NewMerino -->
+  </suite> <!-- Suite -->
 </testng-results>
