@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-24T12:21:47 IST" name="Suite" finished-at="2025-07-24T12:22:07 IST" duration-ms="20004">
+  <suite started-at="2025-07-25T21:52:27 IST" name="Suite" finished-at="2025-07-25T21:52:38 IST" duration-ms="10870">
     <groups>
     </groups>
-    <test started-at="2025-07-24T12:21:47 IST" name="Test" finished-at="2025-07-24T12:22:07 IST" duration-ms="20004">
+    <test started-at="2025-07-25T21:52:27 IST" name="Test" finished-at="2025-07-25T21:52:38 IST" duration-ms="10870">
       <class name="domestic.Check">
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-24T12:21:47 IST" name="OpenBrowser" finished-at="2025-07-24T12:22:00 IST" duration-ms="13128" status="PASS">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-25T21:52:27 IST" name="OpenBrowser" finished-at="2025-07-25T21:52:31 IST" duration-ms="4214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method signature="TC_01()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-24T12:22:00 IST" name="TC_01" description="Verify test" finished-at="2025-07-24T12:22:06 IST" duration-ms="5891" status="PASS">
+        <test-method signature="TC_01()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-25T21:52:31 IST" name="TC_01" description="Verify test" finished-at="2025-07-25T21:52:38 IST" duration-ms="6044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01 -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-24T12:22:06 IST" name="TearDown" finished-at="2025-07-24T12:22:07 IST" duration-ms="928" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:domestic.Check@6c1a5b54]" started-at="2025-07-25T21:52:38 IST" name="TearDown" finished-at="2025-07-25T21:52:38 IST" duration-ms="567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
